@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kyra Technologies</title>
+        <link rel="shortcut icon" href="img/LogoMakr-8ZSRaX.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="Kyra Technologies Website">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="prlxweb">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            .bg {
+              position: fixed;
+              z-index: 1032;
+              width: 100%;
+              height: 100vh;
+              background: #fff;
+              opacity: 1;
+              transition: 1.5s ease-in-out;
+            }
+            .loader{
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .loader-blinker img{
+                transform: scale(90%);
+                animation: blink 2s ease-in-out infinite;
+            }
+            @keyframes blink{
+                0%{
+                    transform: scale(35%);
+                }
+                50%{
+                    transform: scale(90%);
+                }
+                100%{
+                    transform: scale(35%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="covidAlert" class="alert footer-bg top-0 alert-dismissible fade show py-3 rounded-0" role="alert">
+            <div class="d-lg-flex justify-content-center align-items-center text-center ">
+                <p class="h6 mb-0 fw-lighter"><i>Covid-19 Alert!</i></p>
+                <p class="ms-0 ms-lg-3 mb-0 fw-lighter"><small><i>To protect yourself against COVID-19, avoid touching your eyes, nose or mouth
+                    with unwashed hands</i></small></p>
+                <button type="button" class="btn-close btnclose me-3 mt-2" tabindex="-1" data-bs-dismiss="alert" aria-label="Close" id="covid__btn"></button>
+            </div>
+        </div>
+        <div class="bg">
+            <div class="loader fs-27 display-5 position-absolute">
+                <span class="logo-clr">Kyra</span>
+                <span class="loader-blinker"><img src="img/LogoMakr-8ZSRaX.png" style="width: 5%;"></span>
+                <span class="logo-clr">Technologies</span>
+            </div>
+        </div>
+        <header>
+            <section>
+                 <div class="container-fluid">
+                     <nav class="navbar navbar-light px-2 px-md-4 fixed-top hide transi" id="upScroll">
+                         <div class="container-fluid">
+                           <a class="navbar-brand fw-bold" href="index.html">
+                             <span class="logo-clr">Kyra</span>
+                             <span><i class="fas fa-circle logo-circle"></i></span>
+                             <span class="logo-clr">Technologies</span>
+                           </a>
+                           <div class="d-flex ms-auto align-items-center pt-2">
+                             <a href="index.html" class="text-dark text-decoration-none fw-bold me-5 d-sm-block d-none mb-2"><i class="far fa-home"></i></a>
+                             <a href="services.html" class="text-dark text-decoration-none fw-bold me-5 bottom-hover d-sm-block d-none">Services</a>
+                             <a href="caseStudy.html" class="text-dark text-decoration-none fw-bold me-5 bottom-hover d-sm-block d-none">Case Study</a>
+                           </div>
+                           <a href="#offcanvasrtl" class="navbar-toggler border-0 icon type="button" role="button" data-bs-toggle="offcanvas" aria-controls="offcanvasrtl">
+                             <span class="toggle-icon"></span>
+                           </a>
+                           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasrtl" aria-labelledby="offcanvasrtl">
+                             <div class="offcanvas-header position-relative">
+                                 <a class="navbar-brand fw-bold" href="index.html">
+                                     <span class="logo-clr">Kyra</span>
+                                     <span><i class="fas fa-circle logo-circle"></i></span>
+                                     <span class="logo-clr">Technologies</span>
+                                 </a>
+                                 <button type="button" class="btn-close text-reset btnclose shadow-none pe-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                             </div>
+                             <div class="offcanvas-body">
+                                 <ul class="nav flex-column">
+                                     <li class='sub-menu mb-3'><a href='#message' class="text-decoration-none fs-3 text-dark">
+                                                                   <div class="d-flex">
+                                                                    <div>Services</div>
+                                                                    <div class='fal fa-chevron-down right ms-auto'></div>
+                                                                   </div>
+                                                                </a>
+                                        <ul type="none" class="px-0 w-100">
+                                            <div class="accordion pt-3" id="accordionExample">
+                                                <div class="accordion-item border-0">
+                                                  <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-butto collapsed p-0 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                      <strong>Custom Apps</strong>
+                                                    </button>
+                                                  </h2>
+                                                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body p-0 pb-3">
+                                                        <ul type='none' class="px-0 nav flex-column d-block">
+                                                            <li><a href='mobile-app-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fab fa-apple"></i></div>
+                                                                    <div class="bottom-hover">Mobile App Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='web-app-development.html' class="text-decoration-none text-dark">
+                                                                   <div class="d-flex">
+                                                                    <div class="w-10 text-start"><i class="far fa-browser"></i></div>
+                                                                    <div class="bottom-hover">Web App Development</div>
+                                                                   </div>
+                                                            </a></li>
+                                                        </ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item border-0">
+                                                  <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-butto collapsed p-0 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                      <strong>Salesforce</strong>
+                                                    </button>
+                                                  </h2>
+                                                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body p-0 pb-3">
+                                                        <ul type='none' class="px-0 nav flex-column d-block">
+                                                            <li><a href='maintenance-support.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fas fa-headset"></i></div>
+                                                                    <div class="bottom-hover">Maintenance and Support</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='migration-integration.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fas fa-network-wired"></i></div>
+                                                                    <div class="bottom-hover">Migration and Integration</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='consulting.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="far fa-browser"></i></div>
+                                                                    <div class="bottom-hover">Consulting</div>
+                                                                    
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='lighting.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex">
+                                                                    <div class="w-10 text-start"><i class="fas fa-bolt"></i></div>
+                                                                    <div class="bottom-hover">Lighting</div>
+                                                                </div>
+                                                            </a></li>
+                                                        </ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item border-0">
+                                                  <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-butto collapsed p-0 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                      <strong>UI/UX</strong>
+                                                    </button>
+                                                  </h2>
+                                                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body p-0 pb-3">
+                                                        <ul type='none' class="px-0 nav flex-column d-block">
+                                                            <li><a href='ux-research.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fab fa-searchengin"></i></div>
+                                                                    <div class="bottom-hover">UX Research</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='ui-animation.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fas fa-radiation-alt"></i></div>
+                                                                    <div class="bottom-hover">UI & Animation</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='design-testing.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fas fa-paint-brush"></i></div>
+                                                                    <div class="bottom-hover">Design Testing</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='product-design.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex">
+                                                                    <span class="w-10 text-start"><i class="fab fa-product-hunt"></i></span>
+                                                                    <span class="bottom-hover">Product Design</span>
+                                                                </div>
+                                                            </a></li>
+                                                        </ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="accordion-item border-0">
+                                                    <h2 class="accordion-header" id="headingFour">
+                                                      <button class="accordion-butto collapsed p-0 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                        <strong>Web Development</strong>
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                      <div class="accordion-body p-0 pb-3">
+                                                          <ul type='none' class="px-0 nav flex-column d-block">
+                                                            <li><a href='php-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fab fa-php"></i></div>
+                                                                    <div class="bottom-hover">PHP Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='mern-stack-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fas fa-file-code"></i></div>
+                                                                    <div class="bottom-hover">MERN Stack Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='node-js-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fab fa-node-js"></i></div>
+                                                                    <div class="bottom-hover">Node Js Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='react-js-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex">
+                                                                    <div class="w-10 text-start"><i class="fab fa-js"></i></div>
+                                                                    <div class="bottom-hover">React Js Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                          </ul>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item border-0">
+                                                    <h2 class="accordion-header" id="headingFive">
+                                                      <button class="accordion-butto collapsed p-0 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        <strong>Mobile App Development</strong>
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                                      <div class="accordion-body p-0 pb-3">
+                                                          <ul type='none' class="px-0 nav flex-column d-block">
+                                                            <li><a href='e-commerce-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fas fa-user-graduate"></i></div>
+                                                                    <div class="bottom-hover">E-commerce Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='react-native-app.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex">
+                                                                    <div class="w-10 text-start"><i class="fab fa-react"></i></div>
+                                                                    <div class="bottom-hover">React Native App Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                          </ul>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item border-0">
+                                                    <h2 class="accordion-header mb-3" id="headingSix">
+                                                      <button class="accordion-butto collapsed p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        <strong>CMS & E-commerce</strong>
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                                      <div class="accordion-body p-0">
+                                                          <ul type='none' class="px-0 nav flex-column d-block">
+                                                            <li><a href='wordpress-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex mb-2">
+                                                                    <div class="w-10 text-start"><i class="fab fa-wordpress-simple"></i></div>
+                                                                    <div class="bottom-hover">Word press Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                            <li><a href='e-commerce-cms-development.html' class="text-decoration-none text-dark">
+                                                                <div class="d-flex">
+                                                                    <div class="w-10 text-start"><i class="fas fa-user-graduate"></i></div>
+                                                                    <div class="bottom-hover">E-commerce Development</div>
+                                                                </div>
+                                                            </a></li>
+                                                          </ul>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         </ul>
+                                     </li>
+                                     <li class="nav-item me-auto">
+                                         <a href="caseStudy.html" class="nav-link text-dark bottom-hover ps-0 fs-3">Case Study</a>
+                                     </li>
+                                     <li class="nav-item me-auto">
+                                         <a href="about.html" class="nav-link text-dark bottom-hover active ps-0 fs-3">About</a>
+                                     </li>
+                                     <li class="nav-item me-auto">
+                                         <a href="we-are-hiring.html" class="nav-link text-dark bottom-hover ps-0 fs-3">We are Hiring</a>
+                                     </li>
+                                     <li class="nav-item me-auto">
+                                         <a href="#" class="nav-link text-dark bottom-hover ps-0 fs-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</a>
+                                     </li>
+                                 </ul>
+                             </div>
+                           </div>
+                         </div>
+                     </nav>
+                 </div>
+             </section>
+         </header>
+        <main>
+            <section class="pb-8 bg-about position-relative pt-350">
+                    <div class="about-absolute">
+                        <div class="container-fluid text-center position-relative align-center">
+                            <h2 class="display-4 fw-bold logo-clr">About</h1>
+                            <h3 class="mt-3">With Kyra Technologies quality is our top priority</h3>
+                        </div>
+                    </div>
+            </section>
+            <section class="pb-8">
+                <div class="container text-center">
+                    <div class="row flex-row-reverse">
+                        <div class="col-lg-6">
+                            <img src="img/team.jpg" class="img-fluid h-600 obj-fit-cover w-100" alt="team">
+                        </div>
+                        <div class="col-lg-6 mt-3 mt-lg-0 text-start">
+                            <p class="lead">Kyra Technologies does magic because our developers know how to solve a problem 
+                                and can improve a pre-existing problem to a solution. We follow principles, patterns and 
+                                practice to reassess your professional goals.
+                            </p>
+                            <p class="fs-6">From 2016 Kyra Technologies is achieving successful journey of developing software. 
+                                We offer Apps for the Web and Mobile platforms, Software automations, 
+                                ERP/CRP customisations and expansions.
+                            </p>
+                            <p class="fs-6">We are the team of technical expertise and innovative ideas
+                                who believes in delivering projects on time and guarantee transparency, 
+                                satisfaction with utmost quality. Leveraging the power of technical skills
+                                we deliver end to end solutions for million dollar funded small and medium enterprises.
+                            </p>
+                            <p class="fs-6">Our vision is to become a top IT company in web and mobile application
+                                development not only in India and USA but throughout the world. 
+                                We create possibilities to empower our clients and business.
+                            </p>
+                            <p class="fs-6">Kyra Technologies is empowered with certified technical experts. 
+                                We believe in empowering individuals by elevating their skills and having them is the matter of privilege. 
+                                Our team guarantees faster delivery and save huge money and time of our clients
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-8">
+                <div class="container">
+                    <div class="row flex-row-reverse pt-6 text-start">
+                        <div class="col-lg-7">
+                            <h2 class="fw-bold logo-clr display-6 mb-3">Journey of an Enthusiast</h2>
+                            <h5 class="fw-bold me-0 me-lg-5">As we all know a famous proverb “The thread follows the needle. If the needle doesn't pass, the thread doesn't follow”.</h5>
+                            <p class="lead me-5 d-none d-lg-block">With the intention of making a creative software, Harvinder Singh, our founder, started his career in 2008. 
+                                With the knowledge of machinery, tools, techniques , designing, modifications and arrangement he achieved his 
+                                goal as “Kyra Technologies” in 2016. He started with developing websites then delivering digital products, with 
+                                the help of two developers. With his enthusiasm and unique science communications, He has been evolving since 
+                                half-decade by delivering transformative platforms to our partners. Prlx Web is the Brand Name of Kyra Technologies.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img src="img/TA5FSPY9H-UA4TP8PQQ-d8390cab0651-512.png" class="img-fluid h-100 obj-fit-cover" alt="Harvinder(Founder)">  
+                        </div>
+                    </div>
+                    <p class="lead me-5 d-block d-lg-none mt-4">With the intention of making a creative software, Harvinder Singh, our founder, started his career in 2008. 
+                        With the knowledge of machinery, tools, techniques , designing, modifications and arrangement he achieved his 
+                        goal as “Kyra Technologies” in 2016. He started with developing websites then delivering digital products, with 
+                        the help of two developers. With his enthusiasm and unique science communications, He has been evolving since 
+                        half-decade by delivering transformative platforms to our partners. Prlx Web is the Brand Name of Kyra Technologies.
+                    </p>
+                    <div class="row pt-6 text-start align-items-center">
+                        <div class="col-lg-8">
+                            <h2 class="fw-bold logo-clr display-6 me-0 me-md-5">A Software Architect</h2>
+                            <p class="lead me-0 me-md-5 d-none d-lg-block">
+                                As the year passes, today's trend becomes degraded tomorrow. 
+                                We all are surrounded by technology and these technologies work 
+                                on operating systems. So our DEVELOPER develops in discipline and design professionally 
+                                by using the patterns and best upgraded practices. They design, Integrate, refactor and re-design webs.
+                            </p>
+                        </div>
+                        <div class="col-lg">
+                            <img src="img/archi.png" class="img-fluid w-100 obj-fit-cover" alt="Harvinder(Founder)">
+                        </div>
+                    </div>
+                    <p class="lead me-0 me-md-5 d-block d-lg-none">
+                        As the year passes, today's trend becomes degraded tomorrow. 
+                        We all are surrounded by technology and these technologies work 
+                        on operating systems. So our DEVELOPER develops in discipline and design professionally 
+                        by using the patterns and best upgraded practices. They design, Integrate, refactor and re-design webs.
+                    </p>
+                    <h2 class="fw-bold display-6 text-center pt-6">Team</h2>
+                    <h4 class="mt-3 text-center fw-bold">We strive to provide quality digital products at the best value</h4>
+                    <p class="lead text-center">Websites, SEO, Apps, Ecommerce, CMS, Blogs and static sites</p>
+                    <div class="row mt-5 justify-content-center text-center">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card p-3 border-0">
+                                <img src="img/TA5FSPY9H-UA4TP8PQQ-d8390cab0651-512.png" class="img-fluid w-50 mx-auto rounded-circle">
+                                <p class="lead mt-3 mb-1">Harvinder Singh</p>
+                                <p class="text-muted">Founder</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card p-3 border-0">
+                                <img src="img/Senior.jpeg" class="img-fluid w-50 mx-auto rounded-circle">
+                                <p class="lead mt-3 mb-1">Raj Bhatia</p>
+                                <p class="text-muted">Senior Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card p-3 border-0">
+                                <img src="img/Senior2.jpeg" class="img-fluid w-50 mx-auto rounded-circle">
+                                <p class="lead mt-3 mb-1">Sudhir Kaushal</p>
+                                <p class="text-muted">Front-end Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+            <section class="pt-6 footer-bg">
+                <div class="container text-center">
+                    <div class="">
+                        <div class="d-md-flex align-items-center justify-content-center mt-3">
+                            <a href="mailto:hr@prlxweb.com" class="text-decoration-none text-dark fs-5 ms-4">
+                                <div class="d-flex justify-content-center">
+                                    <div class="w-10 text-center"><i class="far fa-envelope"></i></div>
+                                    <div class="bottom-hover ms-3">hr@prlxweb.com</div>
+                                </div>
+                            </a>
+                        </div>
+                        <p class="fs-6 mt-1">E-309, Second Floor, Industrial Area Phase 8A, Mohali 160055, India</p>
+                        <a href="#" class="btn py-2 position-relative px-4 btn-hover shadow-none logo-clr" data-bs-toggle="modal" data-bs-target="#exampleModal">Say Hii!
+                            <span class="forward-icon"><i class="fas fa-long-arrow-alt-right fs-5"></i></span>
+                        </a>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-fullscreen">
+                              <div class="modal-content footer-bg">
+                                  <div class="text-center mt-3">
+                                    <button type="button" class="btn-close shadow-none bg-grey p-3 rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                <div class="modal-body position-relative">
+                                    <div class="container">
+                                        <div class="row">
+                                            <h2 class="display-4 fw-bold logo-clr text-center">Contact</h1>
+                                            <p class="lead text-center">Getting in touch with us is not difficult at all.</p>
+                                            <div class="col-lg-6 mt-3">
+                                                <iframe name="hiddenFrame" class="w-100 h-250" id="hiddenFrame"></iframe>
+                                                <form id="contactForm" action="contact.php" target="hiddenFrame" method="post">
+                                                    <div class="form-group mb-3 text-start">
+                                                        <label for="name" class="lead">Name</label>
+                                                        <input type="text" class="form-control py-2" id="name" name="name" placeholder="enter your name" required>
+                                                    </div>
+                                                    <div class="form-group mb-3 text-start">
+                                                        <label for="mail" class="lead">E-mail</label>
+                                                        <input type="email" id="mail" class="form-control py-2" name="email" placeholder="name@domain.com" required>
+                                                    </div>
+                                                    <div class="form-group mb-3 text-start">
+                                                        <label for="company" class="lead">Company</label>
+                                                        <input type="text" id="message" class="form-control py-2" name="company" placeholder="enter your company name" required>
+                                                    </div>
+                                                    <div class="form-group mb-3 text-start d-none">
+                                                        <label for="sub"></label>
+                                                        <input type="text" id="sub" class="form-control py-2" name="subject" placeholder="Do not fill this!" disabled>
+                                                    </div>
+                                                    <div class="form-group mb-3 text-start">
+                                                        <label for="message" class="lead">Message</label>
+                                                        <textarea name="message"  class="form-control py-2" placeholder="Your Message" required></textarea>
+                                                    </div>
+                                                    <div class="form-group text-start mt-5">
+                                                        <input type="submit" id="submition" class="btn py-2 position-relative px-4 btn-hover shadow-none logo-clr" value="Send Message" onclick="submitionss()"> <br>
+                                                        <lable for="submition" class="text-muted mt-2"><small>Please fill the form first to enable the Button.</small></label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-lg-6 mt-3 p-3 text-start">
+                                                <div class="d-sm-flex">
+                                                    <a href="tel:+91-9041119889" class="text-decoration-none text-dark">
+                                                        <div class="d-alex justify-content-start align-items-center">
+                                                            <span><i class="fal fa-phone-volume me-3 fs-4"></i></span>
+                                                            <span class="fs-5">+91-9041119889</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="mailto:hr@prlxweb.com" class="text-decoration-none text-dark ms-4">
+                                                        <div class="d-alex justify-content-start align-items-center">
+                                                            <span><i class="far fa-envelope me-3 fs-4"></i></span>
+                                                            <span class="fs-5">hr@prlxweb.com</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <p class="mt-3 fs-5">E-309, Second Floor, Industrial Area Phase 8A, <br>
+                                                    Mohali 160055, India
+                                                </p>
+                                                <p class="fs-5-5 text-start">All the personal information that you submit on the 
+                                                    website - (Name, Email, Phone and Project Details) will not be sold, shared or rented to others. 
+                                                    Our sales team or the team of mobile app developers only use this information to 
+                                                    send updates about our company and projects or contact you if requested or find it necessary.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <section class="py-3 footer-bg position-contact-footer">
+                                            <div class="container">
+                                                <a href="privacy-policy.html" class="text-decoration-none text-dark fs-17 bottom-hover float-start">Privacy Policy</a>
+                                                <span class="fs-17 float-end"><i class="far fa-copyright"></i> 2016-2021</span></div>
+                                        </section>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="py-3 footer-bg">
+                <div class="container text-center">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="privacy-policy.html" class="text-decoration-none text-dark fs-17 bottom-hover">Privacy Policy</a> <br>
+                        <span class="fs-17"><i class="far fa-copyright"></i> 2016-2021</span>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <div id="cookieAlert" class="cookie alert bottom-0 partner-bg rounded-0 mb-0 py-1 text-center">
+            <p class="cookie__message ms-0 ms-lg-3 mb-0 fw-lighter text-light d-inline-block"><small>This site uses cookies, but protects your privacy.</small></p>
+            <button id="accept" type="button" class="cookie__accept btn btn-light ms-0 ms-lg-5">Accept</button>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</html>
